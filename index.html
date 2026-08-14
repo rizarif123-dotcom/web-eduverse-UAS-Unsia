@@ -155,26 +155,26 @@
   <!-- Grid dengan items-stretch agar tinggi card kiri & kanan selalu sama -->
   <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
     
-    <!-- CARD 1: YOUTUBE -->
-    <div class="bg-white p-6 rounded-xl shadow border flex flex-col justify-between">
-      <div>
-        <h3 class="text-xl font-bold mb-1 text-gray-800">📺 Sample Video Tutorial</h3>
-        <p class="text-sm text-gray-600 mb-4">Simak pengenalan alur belajar web development pada video di bawah ini:</p>
-      </div>
-      
-      <!-- Aspect ratio video YouTube (16:9) -->
-      <div class="relative w-full aspect-video rounded-lg overflow-hidden bg-black">
-        <iframe 
-          class="absolute top-0 left-0 w-full h-full"
-          src="https://www.youtube.com/embed/DlL632vcHwM?si=rpqIiRImtipi0dHn&amp;start=194" 
-          title="YouTube video player" 
-          frameborder="0" 
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-          referrerpolicy="strict-origin-when-cross-origin" 
-          allowfullscreen>
-        </iframe>
-      </div>
-    </div>
+   <!-- CARD 1: YOUTUBE -->
+<div class="bg-white p-6 rounded-xl shadow border flex flex-col justify-start">
+  <div>
+    <h3 class="text-xl font-bold mb-1 text-gray-800">📺 Sample Video Tutorial</h3>
+    <p class="text-sm text-gray-600 mb-4">Simak pengenalan alur belajar web development pada video di bawah ini:</p>
+  </div>
+  
+  <!-- Video YouTube menempel rapi di bawah deskripsi -->
+  <div class="relative w-full aspect-video rounded-lg overflow-hidden bg-black mt-2">
+    <iframe 
+      class="absolute top-0 left-0 w-full h-full"
+      src="https://www.youtube.com/embed/DlL632vcHwM?si=rpqIiRImtipi0dHn&amp;start=194" 
+      title="YouTube video player" 
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+      referrerpolicy="strict-origin-when-cross-origin" 
+      allowfullscreen>
+    </iframe>
+  </div>
+</div>
 
     <!-- CARD 2: TIKTOK -->
     <div class="bg-white p-6 rounded-xl shadow border flex flex-col justify-between">
