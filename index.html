@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduVerse - Platform Pembelajaran Interaktif</title>
+    <!-- Template CSS: Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom CSS untuk styling tambahan -->
+    <style>
+        html { scroll-behavior: smooth; }
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans leading-normal">
+
+    <!-- 1. NAVBAR (Header & Link Navigation) -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <span class="text-2xl font-bold text-blue-700">Edu<span class="text-amber-500">Verse</span></span>
+            </div>
+            <nav class="hidden md:flex space-x-6 font-medium">
+                <a href="#home" class="hover:text-blue-600 transition">Beranda</a>
+                <a href="#materi" class="hover:text-blue-600 transition">Materi</a>
+                <a href="#jadwal" class="hover:text-blue-600 transition">Jadwal</a>
+                <a href="#quiz" class="hover:text-blue-600 transition">Kuis JS</a>
+                <a href="#media" class="hover:text-blue-600 transition">Multimedia</a>
+                <a href="#pendaftaran" class="hover:text-blue-600 transition">Daftar</a>
+            </nav>
+            <button onclick="toggleDarkMode()" class="bg-gray-200 hover:bg-gray-300 px-3 py-1 rounded-lg text-sm font-semibold transition">
+                🌙 Mode Gelap
+            </button>
+        </div>
+    </header>
+
+    <!-- 2. HERO SECTION (Heading, Paragraph, Text Formatting, Link) -->
+    <section id="home" class="gradient-bg text-white py-16 px-4 text-center">
+        <div class="max-w-3xl mx-auto space-y-4">
+            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight">
+                Tingkatkan Skill Coding & Teknologi Masa Depan
+            </h1>
+            <p class="text-lg opacity-90">
+                Selamat datang di platform <mark class="bg-amber-300 text-gray-900 px-1 rounded">EduVerse</mark>! Di sini Anda akan mempelajari <strong>HTML5</strong>, <em>CSS3</em>, dan <code>JavaScript</code> secara mendalam dan terstruktur.
+            </p>
+            <div class="pt-4">
+                <a href="#pendaftaran" class="bg-amber-500 hover:bg-amber-600 text-gray-900 font-bold px-6 py-3 rounded-full shadow-lg transition inline-block">
+                    Mulai Belajar Sekarang &rarr;
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. SECTION MATERI (Image, Cards, Lists) -->
+    <section id="materi" class="py-12 container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-8 border-b-2 border-blue-500 pb-2 inline-block">Materi Pembelajaran</h2>
+        
+        <div class="grid md:grid-cols-3 gap-6">
+            <!-- Card 1 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition border border-gray-100">
+                <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=500&auto=format&fit=crop&q=60" alt="Pemrograman Web" class="w-full h-48 object-cover">
+                <div class="p-5">
+                    <h3 class="text-xl font-bold mb-2 text-blue-800">1. Web Development Basic</h3>
+                    <p class="text-sm text-gray-600 mb-4">Menguasai struktur dasar dokumen web serta teknik penulisan sintaks yang bersih.</p>
+                    <h4 class="font-semibold text-sm mb-1 text-gray-700">Topik Utama (Unordered List):</h4>
+                    <ul class="list-disc list-inside text-sm text-gray-600 space-y-1">
+                        <li>Elemen & Atribut HTML</li>
+                        <li>Struktur Semantik Page</li>
+                        <li>Styling dengan CSS Grid/Flexbox</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition border border-gray-100">
+                <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&auto=format&fit=crop&q=60" alt="JavaScript Interactive" class="w-full h-48 object-cover">
+                <div class="p-5">
+                    <h3 class="text-xl font-bold mb-2 text-blue-800">2. Interaktivitas JavaScript</h3>
+                    <p class="text-sm text-gray-600 mb-4">Membuat halaman web menjadi dinamis dengan memanipulasi DOM dan Event Handling.</p>
+                    <h4 class="font-semibold text-sm mb-1 text-gray-700">Langkah Belajar (Ordered List):</h4>
+                    <ol class="list-decimal list-inside text-sm text-gray-600 space-y-1">
+                        <li>Logika Dasar & Variabel</li>
+                        <li>Manipulasi DOM & Event</li>
+                        <li>Fetch API & Async JS</li>
+                    </ol>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition border border-gray-100">
+                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=500&auto=format&fit=crop&q=60" alt="CSS Framework" class="w-full h-48 object-cover">
+                <div class="p-5">
+                    <h3 class="text-xl font-bold mb-2 text-blue-800">3. Modern UI Framework</h3>
+                    <p class="text-sm text-gray-600 mb-4">Membangun antarmuka yang modern, responsif, dan estetis dengan Tailwind CSS.</p>
+                    <h4 class="font-semibold text-sm mb-1 text-gray-700">Fitur Utama:</h4>
+                    <ul class="list-disc list-inside text-sm text-gray-600 space-y-1">
+                        <li>Utility-First CSS</li>
+                        <li>Responsive Breakpoints</li>
+                        <li>Dark Mode Integration</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. SECTION JADWAL (Table) -->
+    <section id="jadwal" class="py-12 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Jadwal Kelas Mintat & Bakat</h2>
+            <div class="overflow-x-auto bg-white rounded-lg shadow">
+                <table class="min-w-full text-left border-collapse">
+                    <thead>
+                        <tr class="bg-blue-800 text-white">
+                            <th class="py-3 px-4 font-semibold text-sm">Hari</th>
+                            <th class="py-3 px-4 font-semibold text-sm">Materi</th>
+                            <th class="py-3 px-4 font-semibold text-sm">Waktu</th>
+                            <th class="py-3 px-4 font-semibold text-sm">Instruktur</th>
+                            <th class="py-3 px-4 font-semibold text-sm">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200 text-sm">
+                        <tr class="hover:bg-gray-50">
+                            <td class="py-3 px-4 font-medium">Senin</td>
+                            <td class="py-3 px-4">HTML5 & Form Handling</td>
+                            <td class="py-3 px-4">19.00 - 20.30 WIB</td>
+                            <td class="py-3 px-4">Tim EduVerse</td>
+                            <td class="py-3 px-4"><span class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">Tersedia</span></td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="py-3 px-4 font-medium">Rabu</td>
+                            <td class="py-3 px-4">CSS Layouting & Tailwind</td>
+                            <td class="py-3 px-4">19.00 - 20.30 WIB</td>
+                            <td class="py-3 px-4">Tim EduVerse</td>
+                            <td class="py-3 px-4"><span class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">Tersedia</span></td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="py-3 px-4 font-medium">Jumat</td>
+                            <td class="py-3 px-4">JavaScript Basic to Advanced</td>
+                            <td class="py-3 px-4">19.00 - 21.00 WIB</td>
+                            <td class="py-3 px-4">Tim EduVerse</td>
+                            <td class="py-3 px-4"><span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full text-xs font-semibold">Hampir Penuh</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. SECTION MULTIMEDIA (Video & Audio) -->
+    <section id="media" class="py-12 container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-8">Modul Multimedia</h2>
+        <div class="grid md:grid-cols-2 gap-8 items-start">
+            
+           <!-- Video Container -->
+<div class="bg-white p-6 rounded-xl shadow border">
+    <h3 class="text-xl font-bold mb-3 text-gray-800">📹 Sample Video Tutorial</h3>
+    <p class="text-sm text-gray-600 mb-4">Simak pengenalan alur belajar web development pada video di bawah ini:</p>
+    
+    <!-- menggunakan i frame -->
+    <iframe 
+        class="w-full aspect-video rounded-lg shadow-inner"
+        src="https://www.youtube.com/embed/W-1UgE-3pDU?autoplay=1&muted=1&start=60" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" 
+        allowfullscreen>
+    </iframe>
+</div>
+
+            <!-- Audio Container -->
+            <div class="bg-white p-6 rounded-xl shadow border">
+                <h3 class="text-xl font-bold mb-3 text-gray-800">🎙️ Podcast Pengetahuan Edukasi</h3>
+                <p class="text-sm text-gray-600 mb-4">Dengarkan pembahasan mengenai tips konsistensi belajar coding:</p>
+                <div class="bg-gray-100 p-4 rounded-lg">
+                    <audio controls class="w-full">
+                        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+                        Browser Anda tidak mendukung tag audio.
+                    </audio>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 6. KUIS INTERAKTIF (Elemen JavaScript) -->
+    <section id="quiz" class="py-12 bg-blue-50">
+        <div class="container mx-auto px-4 max-w-2xl">
+            <div class="bg-white p-8 rounded-xl shadow-md border border-blue-100">
+                <h2 class="text-2xl font-bold text-center text-blue-900 mb-2">⚡ Kuis Singkat Pemahaman</h2>
+                <p class="text-center text-gray-600 mb-6 text-sm">Uji pemahaman Anda mengenai HTML & JS di sini!</p>
+                
+                <div id="quiz-container">
+                    <p class="font-semibold text-gray-800 mb-3" id="question-text">
+                        1. Element HTML manakah yang digunakan untuk membuat judul utama pada halaman web?
+                    </p>
+                    <div class="space-y-2 mb-6" id="quiz-options">
+                        <button onclick="checkQuiz('a')" class="w-full text-left p-3 border rounded-lg hover:bg-blue-50 transition">&lt;head&gt;</button>
+                        <button onclick="checkQuiz('b')" class="w-full text-left p-3 border rounded-lg hover:bg-blue-50 transition">&lt;h1&gt;</button>
+                        <button onclick="checkQuiz('c')" class="w-full text-left p-3 border rounded-lg hover:bg-blue-50 transition">&lt;header&gt;</button>
+                    </div>
+                </div>
+
+                <div id="quiz-result" class="hidden text-center p-4 rounded-lg"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. FORM PENDAFTARAN (Form, Input, Validation, Event Handler JS) -->
+    <section id="pendaftaran" class="py-12 container mx-auto px-4 max-w-2xl">
+        <div class="bg-white p-8 rounded-xl shadow-lg border">
+            <h2 class="text-3xl font-bold text-center mb-6 text-gray-800">Form Pendaftaran Anggota</h2>
+            
+            <form id="registrationForm" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                <!-- Text Input -->
+                <div>
+                    <label for="nama" class="block font-semibold mb-1 text-sm">Nama Lengkap *</label>
+                    <input type="text" id="nama" required class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" placeholder="Masukkan nama lengkap">
+                </div>
+
+                <!-- Email Input -->
+                <div>
+                    <label for="email" class="block font-semibold mb-1 text-sm">Alamat Email *</label>
+                    <input type="email" id="email" required class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" placeholder="nama@email.com">
+                </div>
+
+                <!-- Select Option -->
+                <div>
+                    <label for="program" class="block font-semibold mb-1 text-sm">Pilihan Program *</label>
+                    <select id="program" required class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+                        <option value="">-- Pilih Program --</option>
+                        <option value="Web Development">Web Development Basic</option>
+                        <option value="JavaScript Mastery">JavaScript Mastery</option>
+                        <option value="Fullstack Modern">Fullstack Modern</option>
+                    </select>
+                </div>
+
+                <!-- Radio Buttons -->
+                <div>
+                    <span class="block font-semibold mb-1 text-sm">Tingkat Pengalaman:</span>
+                    <div class="flex space-x-4">
+                        <label class="flex items-center space-x-2 text-sm">
+                            <input type="radio" name="experience" value="Pemula" checked class="text-blue-600">
+                            <span>Pemula</span>
+                        </label>
+                        <label class="flex items-center space-x-2 text-sm">
+                            <input type="radio" name="experience" value="Menengah" class="text-blue-600">
+                            <span>Menengah</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Checkbox -->
+                <div>
+                    <label class="flex items-center space-x-2 text-sm">
+                        <input type="checkbox" id="terms" required class="rounded text-blue-600">
+                        <span>Saya menyetujui syarat & ketentuan yang berlaku.</span>
+                    </label>
+                </div>
+
+                <!-- Textarea -->
+                <div>
+                    <label for="catatan" class="block font-semibold mb-1 text-sm">Pesan / Harapan (Opsional)</label>
+                    <textarea id="catatan" rows="3" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" placeholder="Tuliskan harapan Anda mengikuti kelas..."></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="w-full bg-blue-700 hover:bg-blue-800 text-white font-bold py-3 rounded-lg shadow transition">
+                    Kirim Pendaftaran
+                </button>
+            </form>
+
+            <div id="formSuccessMessage" class="hidden mt-4 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg text-center">
+                ✅ **Pendaftaran Berhasil!** Terima kasih telah mendaftar di EduVerse.
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. FOOTER -->
+    <footer class="bg-gray-900 text-white py-8 text-center text-sm">
+        <div class="container mx-auto px-4 space-y-3">
+            <p>&copy; 2026 <strong>EduVerse Platform</strong>. Hak Cipta Dilindungi Undang-Undang.</p>
+            <p class="text-gray-400">
+                Dikembangkan dengan HTML, CSS (Tailwind), dan JavaScript.
+            </p>
+        </div>
+    </footer>
+
+    <!-- 9. JAVASCRIPT LOGIC -->
+    <script>
+        // Feature 1: Dark Mode Toggle
+        function toggleDarkMode() {
+            document.body.classList.toggle('bg-gray-900');
+            document.body.classList.toggle('text-white');
+        }
+
+        // Feature 2: Interactive Quiz
+        function checkQuiz(answer) {
+            const resultDiv = document.getElementById('quiz-result');
+            resultDiv.classList.remove('hidden', 'bg-green-100', 'text-green-800', 'bg-red-100', 'text-red-800');
+            
+            if (answer === 'b') {
+                resultDiv.classList.add('bg-green-100', 'text-green-800');
+                resultDiv.innerHTML = "<strong>Benar! 🎉</strong> Tag <code>&lt;h1&gt;</code> digunakan untuk membuat heading/judul utama.";
+            } else {
+                resultDiv.classList.add('bg-red-100', 'text-red-800');
+                resultDiv.innerHTML = "<strong>Kurang tepat ❌</strong> Coba ingat kembali tag heading dalam HTML!";
+            }
+        }
+
+        // Feature 3: Form Handling & Validation
+        function handleFormSubmit(event) {
+            event.preventDefault(); // Mencegah reload halaman
+            
+            const nama = document.getElementById('nama').value;
+            const program = document.getElementById('program').value;
+
+            if (nama && program) {
+                document.getElementById('registrationForm').reset();
+                const successMsg = document.getElementById('formSuccessMessage');
+                successMsg.classList.remove('hidden');
+                
+                setTimeout(() => {
+                    successMsg.classList.add('hidden');
+                }, 5000);
+            }
+        }
+    </script>
+</body>
+</html>
