@@ -148,41 +148,58 @@
         </div>
     </section>
 
-    <!-- 5. SECTION MULTIMEDIA (Video & Audio) -->
-    <section id="media" class="py-12 container mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center mb-8">Modul Multimedia</h2>
-        <div class="grid md:grid-cols-2 gap-8 items-start">
-            
-           <!-- Video Container -->
-<div class="bg-white p-6 rounded-xl shadow border">
-    <h3 class="text-xl font-bold mb-3 text-gray-800">📹 Sample Video Tutorial</h3>
-    <p class="text-sm text-gray-600 mb-4">Simak pengenalan alur belajar web development pada video di bawah ini:</p>
-    
-    <!-- menggunakan i frame -->
-    <iframe 
-     <iframe 
-        width="560" height="315"
-        src="https://www.youtube.com/embed/DlL632vcHwM?si=rpqIiRImtipi0dHn&amp;start=194"
-        title="YouTube video player"
-        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" 
-        allowfullscreen>
-    </iframe>
-</div>
+   <!-- KONTANER UTAMA MODUL MULTIMEDIA (Grid 2 Kolom) -->
+<div class="max-w-6xl mx-auto px-4 py-8">
+  <h2 class="text-2xl font-bold text-center mb-8">Modul Multimedia</h2>
 
-<div class="bg-white p-6 rounded-xl shadow border">
-    <h3 class="text-xl font-bold mb-3 text-gray-800">📹 Deep learning dengan mentor</h3>
-    <p class="text-sm text-gray-600 mb-4">Dilatih langsung oleh mentor berpengalaman:</p>
-  <blockquote 
-    class="tiktok-embed" 
-    cite="https://www.tiktok.com/@bthecats/video/7673950364059798792" 
-    data-video-id="7673950364059798792" 
-    style="max-width: 565px; min-width: 325px;">
-    <section>
-      <a target="_blank" title="@bthecats" href="https://www.tiktok.com/@bthecats?refer=embed">@bthecats</a> 
-      Jangan di repost, buat tugas kuliah
-    </section>
-  </blockquote>
-  <script async src="https://www.tiktok.com/embed.js"></script>
+  <!-- Grid dengan items-stretch agar tinggi card kiri & kanan selalu sama -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
+    
+    <!-- CARD 1: YOUTUBE -->
+    <div class="bg-white p-6 rounded-xl shadow border flex flex-col justify-between">
+      <div>
+        <h3 class="text-xl font-bold mb-1 text-gray-800">📺 Sample Video Tutorial</h3>
+        <p class="text-sm text-gray-600 mb-4">Simak pengenalan alur belajar web development pada video di bawah ini:</p>
+      </div>
+      
+      <!-- Aspect ratio video YouTube (16:9) -->
+      <div class="relative w-full aspect-video rounded-lg overflow-hidden bg-black">
+        <iframe 
+          class="absolute top-0 left-0 w-full h-full"
+          src="https://www.youtube.com/embed/DlL632vcHwM?si=rpqIiRImtipi0dHn&amp;start=194" 
+          title="YouTube video player" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          referrerpolicy="strict-origin-when-cross-origin" 
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+
+    <!-- CARD 2: TIKTOK -->
+    <div class="bg-white p-6 rounded-xl shadow border flex flex-col justify-between">
+      <div>
+        <h3 class="text-xl font-bold mb-1 text-gray-800">🎓 Deep learning dengan mentor</h3>
+        <p class="text-sm text-gray-600 mb-4">Dilatih langsung oleh mentor berpengalaman:</p>
+      </div>
+
+      <!-- Memposisikan Embed TikTok di Tengah Card -->
+      <div class="flex justify-center items-center w-full overflow-hidden">
+        <blockquote 
+          class="tiktok-embed" 
+          cite="https://www.tiktok.com/@bthecats/video/7673950364059798792" 
+          data-video-id="7673950364059798792" 
+          style="max-width: 100%; min-width: 280px; margin: 0 auto;">
+          <section>
+            <a target="_blank" title="@bthecats" href="https://www.tiktok.com/@bthecats?refer=embed">@bthecats</a> 
+            Jangan di repost, buat tugas kuliah
+          </section>
+        </blockquote>
+        <script async src="https://www.tiktok.com/embed.js"></script>
+      </div>
+    </div>
+
+  </div>
 </div>
 
     <!-- 6. KUIS INTERAKTIF (Elemen JavaScript) -->
